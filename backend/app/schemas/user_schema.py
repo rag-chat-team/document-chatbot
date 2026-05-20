@@ -9,7 +9,7 @@ class UserSignup(BaseModel):
         min_length=2,
         max_length=50
     )
-
+  
     last_name: str = Field(
         
         max_length=50
@@ -21,3 +21,10 @@ class UserSignup(BaseModel):
         min_length=6,
         max_length=100
     )
+class UserLogin(BaseModel):
+
+     email: EmailStr
+     password: str = Field(
+            min_length=6,
+            max_length=100
+        )
